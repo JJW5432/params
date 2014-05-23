@@ -1,4 +1,4 @@
-BBBparams
+BBBBparams
 ======
 Returns a dictionary of key value pairs from the query string. Automatically converts to ints and floats.
 
@@ -42,7 +42,7 @@ If double is True, it will print the double_error for each variable that there i
 In the double_error, `<param>` will be replaced with the parameter name.
 ```python
 #QUERY_STRING = 'length:5&l:3'
->>> query = get_params(repl={'l':'length}, double=True, double_error:'There is a problem with <param>') 
+>>> query = get_params(repl={'l':'length'}, double=True, double_error:'There is a problem with <param>') 
 # will automatically print "There is a problem with length"
 ```
 

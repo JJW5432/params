@@ -1,4 +1,4 @@
-BBBBparams
+params
 ======
 Returns a dictionary of key value pairs from the query string. Automatically converts to ints and floats.
 

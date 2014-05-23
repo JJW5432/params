@@ -1,4 +1,4 @@
-Bparams
+BBparams
 ======
 Returns a dictionary of key value pairs from the query string. Automatically converts to ints and floats.
 
@@ -32,6 +32,7 @@ Pass a dictionary in which the keys are the only key in the QUERY_STRING that wi
 #QUERY_STRING = 'length=5&width=8.8&name=6&foo=bar'
 >>> query = get_params(allow={'length':[int, float], 'width':[int, float], 'name':str]
 >>> print query #=> {'length':5, 'width':8.8}
+```
 
 ###Print Error on Multiple of Same Variable
 If double is True, it will print the double_error for each variable that there is more than one of in the query string.

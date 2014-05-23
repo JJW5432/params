@@ -48,7 +48,7 @@ def verify(key, tipe):
         else: return False
 
 
-def get_params(repl={}, allow={}, double=False, error='Error: <param> supplied more than once, using the leftmost value.', debug=False):
+def get_params(repl={}, allow={}, double=False, double_error='Error: <param> supplied more than once, using the leftmost value.', debug=False):
     params = {}
     if len(environ['QUERY_STRING']) == 0:
         return params
@@ -59,7 +59,7 @@ def get_params(repl={}, allow={}, double=False, error='Error: <param> supplied m
         if is_number(value): value = int(value)
         elif is_number(value, True): value = float(value)
         if double and key in params:
-            print html(error.replace('<param>',key) )
+            print html(double_error.replace('<param>',key) )
         if (allow and key in allow and verify(value, allow[key]) ) or (not allow):
             if debug: print html(key + ": " + str(value))
             params[key] = value

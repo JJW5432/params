@@ -1,4 +1,4 @@
-params
+Bparams
 ======
 Returns a dictionary of key value pairs from the query string. Automatically converts to ints and floats.
 
@@ -24,6 +24,7 @@ Pass a dictionary of variable names that should be replaced as the repl paramete
 #QUERY_STRING = 'l=5'
 >>> query = get_params(repl = {'l':'length'})
 >>> print query #=> {'length':5}
+```
 
 ###Filter Parameters and Types
 Pass a dictionary in which the keys are the only key in the QUERY_STRING that will be included in the dictionary and whose values are either a type or an array of allowed types. If any type is acceptable, use None as the type.

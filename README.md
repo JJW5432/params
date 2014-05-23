@@ -1,4 +1,4 @@
-BBparams
+BBBparams
 ======
 Returns a dictionary of key value pairs from the query string. Automatically converts to ints and floats.
 
@@ -36,8 +36,10 @@ Pass a dictionary in which the keys are the only key in the QUERY_STRING that wi
 
 ###Print Error on Multiple of Same Variable
 If double is True, it will print the double_error for each variable that there is more than one of in the query string.
+
 **Note:** this takes place *after* replace.
-In the double_error, <param> will be replaced with the parameter name.
+
+In the double_error, `<param>` will be replaced with the parameter name.
 ```python
 #QUERY_STRING = 'length:5&l:3'
 >>> query = get_params(repl={'l':'length}, double=True, double_error:'There is a problem with <param>') 
